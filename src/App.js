@@ -1,11 +1,23 @@
 import React from 'react';
-//import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import TodoList from './components/lists';
+import AboutUs from './components/aboutus';
+import Error from './components/error';
+import Navigation from './components/navigation';
 
 function App() {
   return (
-    <TodoList/>
+    <BrowserRouter>
+    <div>
+      <Navigation/>
+      <Switch>
+        <Route path="/" component={TodoList} exact/>   
+        <Route path="/about" component={AboutUs}/>
+        <Route component={Error}/>
+      </Switch>
+    </div>  
+    </BrowserRouter>
   );
 }
 

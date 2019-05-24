@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { thisTypeAnnotation } from '@babel/types';
 
 class TodoList extends Component {
     state = {
